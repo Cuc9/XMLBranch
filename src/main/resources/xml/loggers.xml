@@ -5,8 +5,8 @@
 
     <bean id="consoleEventLogger" class="loggers.ConsoleEventLogger" />
 
-    <bean id="fileEventLogger" class="loggers.FileEventLogger" init-method="init" abstract="true"
-          c:fileName="resources\LogFile.txt">
+    <bean id="fileEventLogger" class="loggers.FileEventLogger" init-method="init"
+          c:fileName="D:\JAVA\LearningSpring\XMLBranch\src\main\resources\LogFile.txt">
     </bean>
 
     <bean id="cacheFileEventLogger" class="loggers.CacheFileEventLogger" destroy-method="destroy" init-method="init"

@@ -1,18 +1,33 @@
-Event{id = 10, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 78, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 31, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 27, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 86, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 75, msg = 'ERROR event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 21, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 53, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 95, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 84, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 85, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 10, msg = 'ERROR event for user Vasya Pupkin', date = 06.11.2016 23:13:02}
-Event{id = 12, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:03}
-Event{id = 20, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:03}
-Event{id = 90, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:03}
-Event{id = 79, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:03}
-Event{id = 45, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 06.11.2016 23:13:03}
-Event{id = 26, msg = 'ERROR event for user Vasya Pupkin', date = 06.11.2016 23:13:03}
+Event{id = 24, msg = 'ERROR event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
+Event{id = 46, msg = 'ERROR event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
+Event{id = 2, msg = 'ERROR event for user Vasya Pupkin', date = 08.11.2016 23:02:07}
+Event{id = 68, msg = 'ERROR event for user Vasya PupkinsystemEnvironment.user.name', date = 08.11.2016 23:12:43}
+Event{id = 48, msg = 'ERROR event for user Vasya PupkinsystemEnvironment.user.name', date = 08.11.2016 23:12:43}
+Event{id = 13, msg = 'ERROR event for user Vasya PupkinsystemEnvironment.user.name', date = 08.11.2016 23:12:44}
+Event{id = 14, msg = 'ERROR event for user Vasya Pupkinnull', date = 08.11.2016 23:14:48}
+Event{id = 11, msg = 'ERROR event for user Vasya Pupkinnull', date = 08.11.2016 23:14:48}
+Event{id = 44, msg = 'ERROR event for user Vasya Pupkinnull', date = 08.11.2016 23:14:49}
+Event{id = 34, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:15:27}
+Event{id = 26, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:15:27}
+Event{id = 31, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:15:28}
+Event{id = 88, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:15:58}
+Event{id = 49, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:15:58}
+Event{id = 84, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:15:59}
+Event{id = 64, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:16:13}
+Event{id = 63, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:16:14}
+Event{id = 26, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:16:14}
+Event{id = 37, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:17:36}
+Event{id = 87, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:17:36}
+Event{id = 89, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:17:37}
+Event{id = 90, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:00}
+Event{id = 7, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:00}
+Event{id = 0, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:01}
+Event{id = 36, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:24}
+Event{id = 39, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:24}
+Event{id = 74, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:25}
+Event{id = 91, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:36}
+Event{id = 72, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:37}
+Event{id = 82, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:18:37}
+Event{id = 8, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:38:25}
+Event{id = 69, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:38:25}
+Event{id = 23, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:38:26}

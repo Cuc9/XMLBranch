@@ -1,15 +1,10 @@
 import beans.Client;
 import beans.Event;
 import beans.EventType;
-import loggers.CombinedEventLogger;
 import loggers.IEventLogger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -17,16 +12,16 @@ import java.util.Map;
  */
 public class App {
     private Client client;
-    private IEventLogger eventLogger;
+    private IEventLogger defaultEventLogger;
     private Map<EventType, IEventLogger> loggers;
     private static EventType type;
 
     public App() {
     }
 
-    public App(Client client, IEventLogger eventLogger, Map<EventType, IEventLogger> loggers) {
+    public App(Client client, IEventLogger defaultEventLogger, Map<EventType, IEventLogger> loggers) {
         this.client = client;
-        this.eventLogger = eventLogger;
+        this.defaultEventLogger = defaultEventLogger;
         this.loggers = loggers;
     }
 
@@ -37,9 +32,9 @@ public class App {
     private void logEvent(String msg, EventType type, Event event) {
         IEventLogger logger = loggers.get(type);
         if (logger == null) {
-            logger = eventLogger;
+            logger = defaultEventLogger;
         }
-        String message = msg.replaceAll(client.getId(), client.getFullName());
+        String message = msg.replaceAll(client.getId(), client.getFullName() + ' ' + client.getGreeting());
         event.setMsg(message);
         logger.logEvent(event);
     }

@@ -15,14 +15,6 @@ public class FileEventLogger implements IEventLogger {
     File logFile;
     private boolean append;
 
-  /*  public FileEventLogger(File logFile) {
-        this.logFile = logFile;
-        System.out.println("--- Assigned file - " + logFile.getName());
-    }*/
-
-  /*  public FileEventLogger() {
-    }*/
-
     public FileEventLogger(String fileName) {
         this.fileName = fileName;
     }
@@ -36,7 +28,6 @@ public class FileEventLogger implements IEventLogger {
         }
     }
 
-    @PostConstruct
     public void init() throws IOException {
         this.logFile = new File(fileName);
         System.out.println("--- Assigned file - " + logFile.getName());
