@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+        <import resource="loggers.xml"/>
+        <context:component-scan base-package="beans"/>
+        
+        <context:annotation-config/>
+
+        <bean id="client" class="beans.Client"
+               p:greeting="${greeting}"
+               c:id="${id}" c:fullName="${fullName}">
+                <property name="type">
+                        <util:constant static-field="java.lang.Math.PI"/>
+                </property>
+        </bean>
+
+        <bean id="app" class="App"
+              c:client-ref="client" c:eventLogger-ref="cacheFileEventLogger" c:loggers-ref="loggersMap">
+                <property name="type">
+                        <null/>
+                </property>
+        </bean>
+
+        <bean id="event" class="beans.Event" scope="prototype">
+                <constructor-arg>
+                        <bean class="java.util.Date"/>
+                </constructor-arg>
+                <constructor-arg>
+                        <bean class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
+                </constructor-arg>
+        </bean>
+
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+        p:ignoreResourceNotFound="true">
+                <property name="locations">
+                        <list>
+                                <value>classpath:client.properties</value>
+                        </list>
+                </property>
+        </bean>
+
+
+        <util:properties id="properties" location="classpath:client.properties"/>
+        <util:map id="loggersMap">
+                <entry key="ERROR" value-ref="combinedEventLogger"/>
+                <entry key="INFO" value-ref="consoleEventLogger"/>
+        </util:map>
+        <util:map id="treeMap" map-class="java.util.TreeMap"/>
+
+</beans>
