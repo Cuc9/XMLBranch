@@ -21,4 +21,6 @@
             </list>
         </constructor-arg>
     </bean>
+
+    <bean id="loggingAspect" class="aspects.LoggingAspect"/>
 </beans>
