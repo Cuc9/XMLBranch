@@ -15,12 +15,15 @@
     <import resource="loggers.xml"/>
 
     <aop:aspectj-autoproxy/>
+
+    <bean id="statisticsAspect" class="aspects.StatisticsAspect" c:otherLogger-ref="fileEventLogger"/>
+
     <context:component-scan base-package="beans"/>
 
     <context:annotation-config/>
 
     <bean id="client" class="beans.Client"
-          p:greeting="#{systemEnvironment['user.name']}"
+          p:greeting="${greeting}"
           c:id="${id}" c:fullName="${fullName}">
         <property name="type" value="#{T(java.lang.Math).PI}"/>
     </bean>
@@ -50,10 +53,14 @@
     </bean>
 
     <util:properties id="properties" location="classpath:client.properties"/>
+
     <util:map id="loggersMap">
         <entry key="ERROR" value-ref="combinedEventLogger"/>
         <entry key="INFO" value-ref="consoleEventLogger"/>
     </util:map>
+
     <util:map id="treeMap" map-class="java.util.TreeMap"/>
+
+
 
 </beans>

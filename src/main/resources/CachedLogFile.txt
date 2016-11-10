@@ -31,3 +31,6 @@ Event{id = 82, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016
 Event{id = 8, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:38:25}
 Event{id = 69, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:38:25}
 Event{id = 23, msg = 'ERROR event for user Vasya Pupkin null', date = 08.11.2016 23:38:26}
+Event{id = 82, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 10.11.2016 23:04:05}
+Event{id = 67, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 10.11.2016 23:04:05}
+Event{id = 30, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 10.11.2016 23:04:06}

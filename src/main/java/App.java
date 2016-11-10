@@ -16,9 +16,6 @@ public class App {
     private Map<EventType, IEventLogger> loggers;
     private static EventType type;
 
-    public App() {
-    }
-
     public App(Client client, IEventLogger defaultEventLogger, Map<EventType, IEventLogger> loggers) {
         this.client = client;
         this.defaultEventLogger = defaultEventLogger;
