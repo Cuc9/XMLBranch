@@ -1,20 +1,19 @@
 package aspects;
 
 import beans.Event;
-import com.sun.org.apache.bcel.internal.generic.IFEQ;
-import loggers.FileEventLogger;
 import loggers.IEventLogger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
-import javax.annotation.PreDestroy;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by arpi on 09.11.2016.
+ * Gathers statistic of logEvent method usage
+ * statistic - map where key - class on witch logEvent was called
+ *                       value - how many times called
  */
 @Aspect
 public class StatisticsAspect {
@@ -33,12 +32,18 @@ public class StatisticsAspect {
     private void consoleLoggersMethods() {
     }
 
+    /**
+     * After each method running updating statistics
+     */
     @AfterReturning("allLogEventMethods()")
     public void beforeConsoleLogStat(JoinPoint joinPoint) {
         IEventLogger logger = (IEventLogger) joinPoint.getTarget();
         addEvent(logger);
     }
 
+    /**
+     * Increase counter depending on caller Class
+     */
     private static void addEvent(IEventLogger logger) {
         Integer count = statistic.get(logger.getClass());
         if (count == null) {
@@ -47,6 +52,10 @@ public class StatisticsAspect {
         statistic.put(logger.getClass(), ++count);
     }
 
+    /**
+     * When ConsoleEventLogger.logEvent() runned 15 times replacing ConsoleEventLogger
+     * with some otherLogger. See constructor parameter in spring.xml
+     */
     @Around("consoleLoggersMethods() && args(event)")
     public void aroundLogEvent(ProceedingJoinPoint joinPoint, Object event) throws Throwable {
         Integer MAX_CONS_EVENTS = 15;
@@ -59,6 +68,9 @@ public class StatisticsAspect {
         }
     }
 
+    /**
+     * Statistic printing
+     */
     public static void print() {
         System.out.println("!!!!!!!!!!!!!!!!!!!!!");
         System.out.println(statistic.toString());

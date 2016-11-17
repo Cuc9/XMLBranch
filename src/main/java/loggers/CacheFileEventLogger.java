@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * Created by arpi on 01.11.2016.
+ * SAME work AS in FileEventLogger but keeps Events in cache.
+ * After cache is full, prints cached Events to file.
  */
 
 public class CacheFileEventLogger extends FileEventLogger {
@@ -38,6 +40,9 @@ public class CacheFileEventLogger extends FileEventLogger {
 
     }
 
+    /**
+     * Writes events from cache to file using parent Class (FileEventLogger)
+     */
     private void writeEventsFromCache (){
         for (Event item : cache) {
             super.logEvent(item);

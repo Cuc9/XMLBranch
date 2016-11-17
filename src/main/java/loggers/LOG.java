@@ -2,6 +2,7 @@ package loggers;
 
 /**
  * Created by arpi on 09.11.2016.
+ * console output of "info" or "warning" messages
  */
 public class LOG {
 

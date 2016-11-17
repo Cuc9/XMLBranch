@@ -4,6 +4,7 @@ import beans.Event;
 
 /**
  * Created by arpi on 30.10.2016.
+ * Prints Event to console
  */
 public class ConsoleEventLogger implements IEventLogger {
     public ConsoleEventLogger() {    }

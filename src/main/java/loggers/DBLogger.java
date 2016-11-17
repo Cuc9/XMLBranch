@@ -10,6 +10,9 @@ import java.util.Date;
 
 /**
  * Created by arpi on 16.11.2016.
+ * Logs Events to database
+ *
+ * NOT FINISHED!!!!!!!!!
  */
 public class DBLogger implements IEventLogger{
     JdbcTemplate jdbcTemplate;

@@ -10,6 +10,7 @@ import javax.annotation.PreDestroy;
 
 /**
  * Created by arpi on 30.10.2016.
+ * some state class
  */
 public class Client{
     private String id;

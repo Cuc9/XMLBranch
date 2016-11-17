@@ -27,6 +27,11 @@ public class App {
         App.type = type;
     }
 
+    /**
+     * Depending on Event type choose logger.
+     * Replace Client's ID in message with Client's Name
+     * Invoke logEvent method on choosen logger
+     */
     private void logEvent(String msg, EventType type, Event event) {
         IEventLogger logger = loggers.get(type);
         if (logger == null) {
@@ -37,6 +42,14 @@ public class App {
         logger.logEvent(event);
     }
 
+    /**
+     * Creating context using spring.xml
+     * External sickle makes INFO Event.
+     * Internal sickle 5 times makes DEFAULT Event (use defaultLogger)
+     * External sickle makes ERROR Event
+     * Printing Statistics
+     * Closing context
+     */
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("xml\\spring.xml");
         App app = ctx.getBean("app", App.class);

@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * Created by arpi on 01.11.2016.
+ * Logs Events to File
  */
 public class FileEventLogger implements IEventLogger {
     String fileName;
@@ -19,6 +20,9 @@ public class FileEventLogger implements IEventLogger {
         this.fileName = fileName;
     }
 
+    /**
+     * Adds string to file and prints  --- File was appended to console
+     */
     public void logEvent(Event event) {
         try {
             FileUtils.writeStringToFile(logFile, event.toString() + "\n", "UTF-8", append);

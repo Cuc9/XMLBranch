@@ -5,3 +5,17 @@ Event{id = 39, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date 
 Event{id = 98, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
 Event{id = 51, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
 Event{id = 51, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
+Event{id = 93, msg = 'INFO event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:04}
+Event{id = 51, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:05}
+Event{id = 51, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:05}
+Event{id = 84, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:05}
+Event{id = 67, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:05}
+Event{id = 1, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:05}
+Event{id = 21, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:13:05}
+Event{id = 13, msg = 'INFO event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:54}
+Event{id = 61, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
+Event{id = 89, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
+Event{id = 85, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
+Event{id = 70, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
+Event{id = 85, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
+Event{id = 96, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}

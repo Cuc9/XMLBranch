@@ -12,6 +12,8 @@ import java.util.Random;
 
 /**
  * Created by arpi on 31.10.2016.
+ * Some event has ID, message and creation date
+ * NOT singletone
  */
 
 public class Event {
@@ -51,6 +53,9 @@ public class Event {
         System.out.println("Event bean deleted----");
     }
 
+    /**
+     * Checking if it was day-time when Event created
+     */
     public static boolean isDay(){
         Calendar calDate = Calendar.getInstance();
         int hour = calDate.get(Calendar.HOUR_OF_DAY);

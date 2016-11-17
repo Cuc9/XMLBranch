@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 /**
- * Created by arpi on 06.11.2016.
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!JUST TEMP CLASS FOR SOME TESTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
 public class Temp {
     public static void main(String[] args) {

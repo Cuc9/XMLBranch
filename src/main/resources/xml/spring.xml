@@ -59,12 +59,6 @@
 
     <util:map id="treeMap" map-class="java.util.TreeMap"/>
 
-    <!--ASPECTS
-    <bean id="statisticsAspect" class="aspects.StatisticsAspect" c:otherLogger-ref="fileEventLogger"/>
--->
-    <bean id="logAspect" class="aspects.LoggingAspect"/>
-    <bean id="statAspect" class="aspects.StatisticsAspect" c:otherLogger-ref="fileEventLogger"/>
-
     <!--JDBC-->
    <!-- <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg ref="dataSource"/>
