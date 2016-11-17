@@ -1,15 +1,7 @@
-Event{id = 13, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 73, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 0, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 64, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 27, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 82, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 49, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 30, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 21, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 28, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:06}
-Event{id = 17, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:07}
-Event{id = 38, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:07}
-Event{id = 43, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:07}
-Event{id = 38, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:07}
-Event{id = 94, msg = 'DEFAULT/CACHE event for user Vasya Pupkin', date = 08.11.2016 23:02:07}
+Event{id = 16, msg = 'INFO event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:43}
+Event{id = 50, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
+Event{id = 93, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
+Event{id = 39, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
+Event{id = 98, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
+Event{id = 51, msg = 'DEFAULT/CACHE event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}
+Event{id = 51, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 20:02:44}

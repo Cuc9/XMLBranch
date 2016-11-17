@@ -11,12 +11,12 @@ import org.aspectj.lang.annotation.*;
 
 @Aspect
 public class LoggingAspect {
-
+/*
     @Pointcut("execution(* *.logEvent(..))")
-    private void allLogEventMethods(){}
+    public void allLogEventMethods(){}
 
     @Pointcut("allLogEventMethods() && within(*.*File*Logger)")
-    private void logEventInsideFileLoggers () {}
+    public void logEventInsideFileLoggers () {}
 
     @Before("allLogEventMethods()")
     public void logBefore(JoinPoint joinPoint){
@@ -25,7 +25,7 @@ public class LoggingAspect {
         " " + joinPoint.getSignature().getName());
     }
 
-    @AfterReturning(pointcut = "allLogEventMethods()", returning = "retVal")
+    @AfterReturning(pointcut = "logEventInsideFileLoggers()", returning = "retVal")
     public void afterReturning(Object retVal){
         LOG.info("Returned value: " + retVal);
     }
@@ -33,5 +33,5 @@ public class LoggingAspect {
     @AfterThrowing(pointcut = "allLogEventMethods()", throwing = "ex")
     public void afterThrow(Throwable ex){
         LOG.warn("Thrown: " + ex);
-    }
+    }*/
 }

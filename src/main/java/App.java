@@ -1,3 +1,4 @@
+import aspects.StatisticsAspect;
 import beans.Client;
 import beans.Event;
 import beans.EventType;
@@ -50,6 +51,7 @@ public class App {
             }
             app.logEvent("ERROR event for user 1", EventType.ERROR, (Event) ctx.getBean("event"));
         }
+        StatisticsAspect.print();
         ctx.close();
     }
 }

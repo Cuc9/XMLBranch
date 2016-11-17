@@ -8,10 +8,20 @@
     <artifactId>com.epam.spring.core</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <spring.ver>4.3.3.RELEASE</spring.ver>
+        <spring.ver>4.2.8.RELEASE</spring.ver>
     </properties>
 
 <dependencies>
+    <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derby</artifactId>
+        <version>RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>4.3.3.RELEASE</version>
+    </dependency>
     <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjweaver</artifactId>

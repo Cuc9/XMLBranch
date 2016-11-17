@@ -25,6 +25,10 @@ public class Event {
         this.df = df;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getMsg() {
         return msg;
     }

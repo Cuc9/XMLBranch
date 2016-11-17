@@ -6,10 +6,7 @@ import loggers.FileEventLogger;
 import loggers.IEventLogger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 
 import javax.annotation.PreDestroy;
 import java.util.HashMap;
@@ -21,7 +18,7 @@ import java.util.Set;
  */
 @Aspect
 public class StatisticsAspect {
-    private Map<IEventLogger, Integer> statistic = new HashMap<IEventLogger, Integer>();
+    private static Map<Class, Integer> statistic = new HashMap<Class, Integer>();
     private IEventLogger otherLogger;
 
     public StatisticsAspect(IEventLogger otherLogger) {
@@ -36,35 +33,35 @@ public class StatisticsAspect {
     private void consoleLoggersMethods() {
     }
 
-    @AfterReturning(pointcut = "allLogEventMethods()")
-    public void afterReturn(JoinPoint joinPoint) {
+    @AfterReturning("allLogEventMethods()")
+    public void beforeConsoleLogStat(JoinPoint joinPoint) {
         IEventLogger logger = (IEventLogger) joinPoint.getTarget();
-        this.addEvent(logger);
+        addEvent(logger);
     }
 
-    private void addEvent(IEventLogger logger) {
-        Integer count = this.statistic.get(logger);
+    private static void addEvent(IEventLogger logger) {
+        Integer count = statistic.get(logger.getClass());
         if (count == null) {
             count = 0;
         }
-        this.statistic.put(logger, ++count);
+        statistic.put(logger.getClass(), ++count);
     }
 
     @Around("consoleLoggersMethods() && args(event)")
     public void aroundLogEvent(ProceedingJoinPoint joinPoint, Object event) throws Throwable {
-        Integer MAX_CONS_EVENTS = 5;
+        Integer MAX_CONS_EVENTS = 15;
         IEventLogger target = (IEventLogger) joinPoint.getTarget();
-        Integer counter = statistic.get(target);
-        if (counter < MAX_CONS_EVENTS) {
+        Integer counter = statistic.get(target.getClass());
+        if ((counter!=null) && (counter < MAX_CONS_EVENTS)) {
             joinPoint.proceed(new Object[]{event});
         } else {
             otherLogger.logEvent((Event) event);
         }
     }
 
-    @PreDestroy
-    public void print() {
-        System.out.println(this.statistic.toString());
+    public static void print() {
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println(statistic.toString());
     }
 
 }

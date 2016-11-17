@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="consoleEventLogger" class="loggers.ConsoleEventLogger" />
 
@@ -10,7 +12,7 @@
     </bean>
 
     <bean id="cacheFileEventLogger" class="loggers.CacheFileEventLogger" destroy-method="destroy" init-method="init"
-    c:cacheSize="6" c:fileName="D:\JAVA\LearningSpring\XMLBranch\src\main\resources\CachedLogFile.txt">
+    c:cacheSize="3" c:fileName="D:\JAVA\LearningSpring\XMLBranch\src\main\resources\CachedLogFile.txt">
     </bean>
 
     <bean id="combinedEventLogger" class="loggers.CombinedEventLogger">
