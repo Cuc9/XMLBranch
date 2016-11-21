@@ -29,4 +29,6 @@
     <!--ASPECTS-->
     <bean id="logAspect" class="aspects.LoggingAspect"/>
     <bean id="statAspect" class="aspects.StatisticsAspect" c:otherLogger-ref="fileEventLogger"/>
+
+
 </beans>
