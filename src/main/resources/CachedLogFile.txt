@@ -7,3 +7,9 @@ Event{id = 21, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.
 Event{id = 55, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:54}
 Event{id = 64, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
 Event{id = 96, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 17.11.2016 23:48:55}
+Event{id = 28, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 21.11.2016 23:07:18}
+Event{id = 41, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 21.11.2016 23:07:19}
+Event{id = 54, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 21.11.2016 23:07:19}
+Event{id = 6, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 21.11.2016 23:09:44}
+Event{id = 10, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 21.11.2016 23:09:45}
+Event{id = 39, msg = 'ERROR event for user Vasya Pupkin Fuck you', date = 21.11.2016 23:09:45}

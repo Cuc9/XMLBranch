@@ -12,16 +12,16 @@
     </properties>
 
 <dependencies>
-    <dependency>
+<!--    <dependency>
         <groupId>net.as-development.asdk</groupId>
         <artifactId>sql-server</artifactId>
         <version>1.2.0</version>
-    </dependency>
-    <dependency>
+    </dependency>-->
+<!--    <dependency>
         <groupId>org.apache.derby</groupId>
         <artifactId>derby</artifactId>
         <version>RELEASE</version>
-    </dependency>
+    </dependency>-->
     <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjweaver</artifactId>
