@@ -20,7 +20,7 @@
     <bean id="combinedEventLogger" class="loggers.CombinedEventLogger">
         <constructor-arg>
             <list>
-                <ref bean="consoleEventLogger"/>
+                <ref bean="dBLogger"/>
                 <ref bean="cacheFileEventLogger"/>
             </list>
         </constructor-arg>

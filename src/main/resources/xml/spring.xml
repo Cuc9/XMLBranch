@@ -12,7 +12,7 @@
                         http://www.springframework.org/schema/aop
                         http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
-    <import resource="loggers.xml"/>
+   <!-- <import resource="loggers.xml"/>-->
 
     <aop:aspectj-autoproxy/>
 
@@ -20,9 +20,13 @@
 
     <context:annotation-config/>
 
+
+    <util:properties id="clientProps" location="classpath:client.properties"/>
+    <util:properties id="dbProps" location="classpath:DB.properties"/>
+
     <bean id="client" class="beans.Client"
-          p:greeting="${greeting}"
-          c:id="${id}" c:fullName="${fullName}">
+          p:greeting="123"
+          c:id="1" c:fullName="Vasya">
         <property name="type" value="#{T(java.lang.Math).PI}"/>
     </bean>
 
@@ -35,48 +39,54 @@
         </constructor-arg>
     </bean>
 
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:ignoreResourceNotFound="true">
-        <property name="locations">
-            <list>
-                <value>classpath:client.properties</value>
-            </list>
-        </property>
-    </bean>
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:ignoreResourceNotFound="false">
-        <property name="locations">
-            <list>
-                <value>classpath:DB.properties</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"-->
+          <!--p:ignoreResourceNotFound="true">-->
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value>classpath:client.properties</value>-->
+                <!--<value>classpath:DB.properties</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"-->
+          <!--p:ignoreResourceNotFound="false">-->
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value>classpath:DB.properties</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--c:defaultEventLogger-ref="#{T(beans.Event).day ? 'fileEventLogger' : 'consoleEventLogger' }"-->
     <bean id="app" class="App"
           c:client-ref="client"
-          c:defaultEventLogger-ref="#{T(beans.Event).day ? 'fileEventLogger' : 'consoleEventLogger' }"
+          c:defaultEventLogger-ref="dBLogger"
           c:loggers-ref="loggersMap">
         <property name="type" value="#{null}"/>
     </bean>
 
-    <util:properties id="properties" location="classpath:client.properties"/>
 
     <util:map id="loggersMap">
-        <entry key="ERROR" value-ref="combinedEventLogger"/>
-        <entry key="INFO" value-ref="consoleEventLogger"/>
+        <!--<entry key="ERROR" value-ref="combinedEventLogger"/>-->
+        <entry key="INFO" value-ref="dBLogger"/>
     </util:map>
 
     <util:map id="treeMap" map-class="java.util.TreeMap"/>
 
     <!--JDBC-->
-<!--    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg ref="dataSource"/>
     </bean>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="${jdbc.driverClassName}"/>
-        <property name="url" value="${jdbc.url}"/>
-        <property name="username" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-    </bean>-->
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:tcp://localhost/~/test;SCHEMA=TEST_SCHEMA"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+    </bean>
+
+    <bean name="dBLogger" class="loggers.DBLogger">
+        <constructor-arg name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
 </beans>

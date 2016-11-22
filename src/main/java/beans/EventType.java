@@ -5,6 +5,7 @@ package beans;
  * Type of Event
  */
 public enum EventType {
-    INFO,ERROR
+    INFO,
+    ERROR,
 }
 

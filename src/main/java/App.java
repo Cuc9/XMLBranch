@@ -53,7 +53,7 @@ public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("xml\\spring.xml");
         App app = ctx.getBean("app", App.class);
-        for (int i = 0; i < 3; i++) {
+        /*for (int i = 0; i < 3; i++) {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
@@ -64,7 +64,8 @@ public class App {
             }
             app.logEvent("ERROR event for user 1", EventType.ERROR, (Event) ctx.getBean("event"));
         }
-        StatisticsAspect.print();
+        StatisticsAspect.print();*/
+        app.logEvent("INFO event for user 1", EventType.INFO, (Event) ctx.getBean("event"));
         ctx.close();
     }
 }

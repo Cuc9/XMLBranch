@@ -2,8 +2,11 @@ package loggers;
 
 import beans.Event;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -19,17 +22,15 @@ import java.util.List;
 public class DBLogger implements IEventLogger{
     JdbcTemplate jdbcTemplate;
 
-    public DBLogger (){
-        jdbcTemplate.execute("CREATE TABLE t_event " +
-                "(Event_Id int notnull," +
-                "Msg VARCHAR 256);");
+    public DBLogger(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     public void logEvent(Event event) {
         jdbcTemplate.update("INSERT INTO t_event (id, msg) VALUES (?,?)",
                 event.getId(), event.toString());
-        int count = jdbcTemplate.queryForObject("SELECT cont(*) FROM t_event", Integer.class);
-        String msg = jdbcTemplate.queryForObject("SELECT msg FROM t_event where id=?", new Object[]{1},String.class);
+        /*int count = jdbcTemplate.queryForObject("SELECT cont(*) FROM t_event", Integer.class);
+        String msg = jdbcTemplate.queryForObject("SELECT msg FROM t_event where id=?", new Object[]{1},String.class);*/
     }
 
     public void readObjectFromDB() {
